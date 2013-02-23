@@ -15,6 +15,7 @@
 		2896AF3016D8A39900235911 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2896AF2A16D8A39900235911 /* Default-568h@2x.png */; };
 		2896AF3116D8A39900235911 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2896AF2B16D8A39900235911 /* Default.png */; };
 		2896AF3216D8A39900235911 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2896AF2C16D8A39900235911 /* Default@2x.png */; };
+		2896AF3816D8A49F00235911 /* GameScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2896AF3716D8A49F00235911 /* GameScoresViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		2896AF2A16D8A39900235911 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2896AF2B16D8A39900235911 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2896AF2C16D8A39900235911 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		2896AF3616D8A49F00235911 /* GameScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScoresViewController.h; path = Classes/GameScoresViewController.h; sourceTree = "<group>"; };
+		2896AF3716D8A49F00235911 /* GameScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScoresViewController.m; path = Classes/GameScoresViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,7 @@
 		2896AF2316D8A38800235911 /* Parse Example */ = {
 			isa = PBXGroup;
 			children = (
+				2896AF3416D8A46700235911 /* Controllers */,
 				2896AF2416D8A39900235911 /* AppDelegate.h */,
 				2896AF2516D8A39900235911 /* AppDelegate.m */,
 				2896AF2916D8A39900235911 /* Resources */,
@@ -102,6 +106,15 @@
 				2896AF2816D8A39900235911 /* Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2896AF3416D8A46700235911 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2896AF3616D8A49F00235911 /* GameScoresViewController.h */,
+				2896AF3716D8A49F00235911 /* GameScoresViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +183,7 @@
 			files = (
 				2896AF2D16D8A39900235911 /* AppDelegate.m in Sources */,
 				2896AF2F16D8A39900235911 /* main.m in Sources */,
+				2896AF3816D8A49F00235911 /* GameScoresViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
