@@ -16,6 +16,7 @@
 		2896AF3116D8A39900235911 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2896AF2B16D8A39900235911 /* Default.png */; };
 		2896AF3216D8A39900235911 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2896AF2C16D8A39900235911 /* Default@2x.png */; };
 		2896AF3816D8A49F00235911 /* GameScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2896AF3716D8A49F00235911 /* GameScoresViewController.m */; };
+		2896AF3A16D8A7A000235911 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2896AF3916D8A7A000235911 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		2896AF2C16D8A39900235911 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2896AF3616D8A49F00235911 /* GameScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScoresViewController.h; path = Classes/GameScoresViewController.h; sourceTree = "<group>"; };
 		2896AF3716D8A49F00235911 /* GameScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScoresViewController.m; path = Classes/GameScoresViewController.m; sourceTree = "<group>"; };
+		2896AF3916D8A7A000235911 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,9 +42,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2896AF0716D8A33F00235911 /* UIKit.framework in Frameworks */,
-				2896AF0916D8A33F00235911 /* Foundation.framework in Frameworks */,
+				2896AF3A16D8A7A000235911 /* CoreData.framework in Frameworks */,
 				2896AF0B16D8A33F00235911 /* CoreGraphics.framework in Frameworks */,
+				2896AF0916D8A33F00235911 /* Foundation.framework in Frameworks */,
+				2896AF0716D8A33F00235911 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,9 +72,10 @@
 		2896AF0516D8A33F00235911 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2896AF0616D8A33F00235911 /* UIKit.framework */,
-				2896AF0816D8A33F00235911 /* Foundation.framework */,
+				2896AF3916D8A7A000235911 /* CoreData.framework */,
 				2896AF0A16D8A33F00235911 /* CoreGraphics.framework */,
+				2896AF0816D8A33F00235911 /* Foundation.framework */,
+				2896AF0616D8A33F00235911 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
