@@ -31,6 +31,7 @@
 		28B8DFA016D94BB200988839 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DF9716D94BB200988839 /* UIImageView+AFNetworking.m */; };
 		28B8DFA616D94BB900988839 /* AFIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DFA316D94BB900988839 /* AFIncrementalStore.m */; };
 		28B8DFA716D94BB900988839 /* AFRESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DFA516D94BB900988839 /* AFRESTClient.m */; };
+		28B8DFAA16D978EF00988839 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DFA916D978EF00988839 /* GameScore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +78,8 @@
 		28B8DFA316D94BB900988839 /* AFIncrementalStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFIncrementalStore.m; sourceTree = "<group>"; };
 		28B8DFA416D94BB900988839 /* AFRESTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRESTClient.h; sourceTree = "<group>"; };
 		28B8DFA516D94BB900988839 /* AFRESTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRESTClient.m; sourceTree = "<group>"; };
+		28B8DFA816D978EF00988839 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScore.h; path = Classes/GameScore.h; sourceTree = "<group>"; };
+		28B8DFA916D978EF00988839 /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScore.m; path = Classes/GameScore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 		2896AF3B16D8B27200235911 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				28B8DFA816D978EF00988839 /* GameScore.h */,
+				28B8DFA916D978EF00988839 /* GameScore.m */,
 				2896AF3C16D8B2A000235911 /* ParseExample.xcdatamodeld */,
 			);
 			name = Models;
@@ -306,6 +311,7 @@
 				28B8DFA016D94BB200988839 /* UIImageView+AFNetworking.m in Sources */,
 				28B8DFA616D94BB900988839 /* AFIncrementalStore.m in Sources */,
 				28B8DFA716D94BB900988839 /* AFRESTClient.m in Sources */,
+				28B8DFAA16D978EF00988839 /* GameScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

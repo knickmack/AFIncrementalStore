@@ -13,7 +13,6 @@
 @interface AppDelegate ()
 
 @property (strong, nonatomic, readonly) GameScoresViewController *gameScoresViewController;
-@property (strong, nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic, readonly) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic, readonly) UINavigationController *navigationController;
 @property (strong, nonatomic, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
