@@ -25,6 +25,12 @@ static NSString * const kPFRESTAPIBaseURLString = @"https://api.parse.com/1/";
     return _sharedClient;
 }
 
+- (NSString *)pathForEntity:(NSEntityDescription *)entity {
+    NSString *path = [NSString stringWithFormat:@"classes/%@", entity.name];
+    
+    return path;
+}
+
 #pragma mark - AFHTTPClient
 
 - (id)initWithBaseURL:(NSURL *)url {
