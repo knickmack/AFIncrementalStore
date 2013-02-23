@@ -7,6 +7,7 @@
 //
 
 #import "GameScoresViewController.h"
+#import "GameScore.h"
 #import "AppDelegate.h"
 
 @interface GameScoresViewController () <NSFetchedResultsControllerDelegate>
@@ -50,6 +51,32 @@
 
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
     [self.tableView reloadData];
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.fetchedResultsController.sections.count;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    id<NSFetchedResultsSectionInfo> rows = [self.fetchedResultsController.sections objectAtIndex:section];
+    
+    return [rows numberOfObjects];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    }
+    GameScore *gameScore = (GameScore *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    cell.detailTextLabel.text = gameScore.score.stringValue;
+    cell.textLabel.text = gameScore.playerName;
+    
+    return cell;
 }
 
 #pragma mark - UIViewController
