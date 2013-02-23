@@ -9,6 +9,8 @@
 #import "PFRESTClient.h"
 
 static NSString * const kPFRESTAPIBaseURLString = @"https://api.parse.com/1/";
+static NSString * const kPFApplicationId = @"YOUR_APPLICATION_ID";
+static NSString * const kPFRESTAPIKey = @"YOUR_REST_API_KEY";
 
 @implementation PFRESTClient
 
@@ -31,6 +33,18 @@ static NSString * const kPFRESTAPIBaseURLString = @"https://api.parse.com/1/";
     return path;
 }
 
+- (id)representationOrArrayOfRepresentationsFromResponseObject:(id)responseObject {
+    id representationOrArrayOfRepresentations = [responseObject valueForKeyPath:@"results"];
+    
+    return representationOrArrayOfRepresentations;
+}
+
+- (NSString *)resourceIdentifierForRepresentation:(NSDictionary *)representation ofEntity:(NSEntityDescription *)entity fromResponse:(NSHTTPURLResponse *)response {
+    NSString *resourceIdentifier = representation[@"objectId"];
+    
+    return resourceIdentifier;
+}
+
 #pragma mark - AFHTTPClient
 
 - (id)initWithBaseURL:(NSURL *)url {
@@ -41,6 +55,8 @@ static NSString * const kPFRESTAPIBaseURLString = @"https://api.parse.com/1/";
     
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     [self setDefaultHeader:@"Accept" value:@"application/json"];
+    [self setDefaultHeader:@"X-Parse-Application-Id" value:kPFApplicationId];
+    [self setDefaultHeader:@"X-Parse-REST-API-Key" value:kPFRESTAPIKey];
     
     return self;
 }

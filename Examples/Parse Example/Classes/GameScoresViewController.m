@@ -46,6 +46,12 @@
     return _fetchedResultsController;
 }
 
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.tableView reloadData];
+}
+
 #pragma mark - UIViewController
 
 - (void)loadView {
