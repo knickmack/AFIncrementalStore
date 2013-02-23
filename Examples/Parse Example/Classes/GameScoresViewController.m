@@ -14,6 +14,9 @@
 
 @property (strong, nonatomic, readonly) NSFetchRequest *fetchRequest;
 @property (strong, nonatomic, readonly) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic, readonly) UIBarButtonItem *refreshBarButtonItem;
+
+- (void)refetchData;
 
 @end
 
@@ -21,6 +24,7 @@
 
 @synthesize fetchRequest = _fetchRequest;
 @synthesize fetchedResultsController = _fetchedResultsController;
+@synthesize refreshBarButtonItem = _refreshBarButtonItem;
 
 #pragma mark - GameScoresViewController
 
@@ -45,6 +49,19 @@
     }
     
     return _fetchedResultsController;
+}
+
+- (UIBarButtonItem *)refreshBarButtonItem {
+    if (!_refreshBarButtonItem) {
+        _refreshBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(refetchData)];
+    }
+    
+    return _refreshBarButtonItem;
+}
+
+- (void)refetchData {
+    self.fetchedResultsController.fetchRequest.resultType = NSManagedObjectResultType;
+    [self.fetchedResultsController performFetch:nil];
 }
 
 #pragma mark - NSFetchedResultsControllerDelegate
@@ -84,6 +101,7 @@
 - (void)loadView {
     [super loadView];
     
+    self.navigationItem.rightBarButtonItem = self.refreshBarButtonItem;
     self.title = NSLocalizedString(@"GameScores", nil);
 }
 
