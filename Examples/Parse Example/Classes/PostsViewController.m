@@ -90,10 +90,17 @@
     }
     Post *post = (Post *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.detailTextLabel.text = post.content;
     cell.textLabel.text = post.title;
     
     return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
 }
 
 #pragma mark - UIViewController
