@@ -15,7 +15,7 @@
 		2896AF3016D8A39900235911 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2896AF2A16D8A39900235911 /* Default-568h@2x.png */; };
 		2896AF3116D8A39900235911 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2896AF2B16D8A39900235911 /* Default.png */; };
 		2896AF3216D8A39900235911 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2896AF2C16D8A39900235911 /* Default@2x.png */; };
-		2896AF3816D8A49F00235911 /* GameScoresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2896AF3716D8A49F00235911 /* GameScoresViewController.m */; };
+		2896AF3816D8A49F00235911 /* PostsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2896AF3716D8A49F00235911 /* PostsViewController.m */; };
 		2896AF3A16D8A7A000235911 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2896AF3916D8A7A000235911 /* CoreData.framework */; };
 		2896AF3E16D8B2A000235911 /* ParseExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2896AF3C16D8B2A000235911 /* ParseExample.xcdatamodeld */; };
 		28B8DF7F16D94AD300988839 /* PFIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DF7E16D94AD300988839 /* PFIncrementalStore.m */; };
@@ -31,7 +31,8 @@
 		28B8DFA016D94BB200988839 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DF9716D94BB200988839 /* UIImageView+AFNetworking.m */; };
 		28B8DFA616D94BB900988839 /* AFIncrementalStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DFA316D94BB900988839 /* AFIncrementalStore.m */; };
 		28B8DFA716D94BB900988839 /* AFRESTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DFA516D94BB900988839 /* AFRESTClient.m */; };
-		28B8DFAA16D978EF00988839 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DFA916D978EF00988839 /* GameScore.m */; };
+		28B8DFB016D98C5500988839 /* Comment.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DFAF16D98C5500988839 /* Comment.m */; };
+		28B8DFB316D98D7800988839 /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 28B8DFB216D98D7800988839 /* Post.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +48,8 @@
 		2896AF2A16D8A39900235911 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		2896AF2B16D8A39900235911 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2896AF2C16D8A39900235911 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		2896AF3616D8A49F00235911 /* GameScoresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScoresViewController.h; path = Classes/GameScoresViewController.h; sourceTree = "<group>"; };
-		2896AF3716D8A49F00235911 /* GameScoresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScoresViewController.m; path = Classes/GameScoresViewController.m; sourceTree = "<group>"; };
+		2896AF3616D8A49F00235911 /* PostsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostsViewController.h; path = Classes/PostsViewController.h; sourceTree = "<group>"; };
+		2896AF3716D8A49F00235911 /* PostsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostsViewController.m; path = Classes/PostsViewController.m; sourceTree = "<group>"; };
 		2896AF3916D8A7A000235911 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		2896AF3D16D8B2A000235911 /* ParseExample.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ParseExample.xcdatamodel; sourceTree = "<group>"; };
 		28B8DF7D16D94AD300988839 /* PFIncrementalStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PFIncrementalStore.h; path = Classes/PFIncrementalStore.h; sourceTree = "<group>"; };
@@ -78,8 +79,10 @@
 		28B8DFA316D94BB900988839 /* AFIncrementalStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFIncrementalStore.m; sourceTree = "<group>"; };
 		28B8DFA416D94BB900988839 /* AFRESTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFRESTClient.h; sourceTree = "<group>"; };
 		28B8DFA516D94BB900988839 /* AFRESTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFRESTClient.m; sourceTree = "<group>"; };
-		28B8DFA816D978EF00988839 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScore.h; path = Classes/GameScore.h; sourceTree = "<group>"; };
-		28B8DFA916D978EF00988839 /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScore.m; path = Classes/GameScore.m; sourceTree = "<group>"; };
+		28B8DFAE16D98C5500988839 /* Comment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Comment.h; path = Classes/Comment.h; sourceTree = "<group>"; };
+		28B8DFAF16D98C5500988839 /* Comment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Comment.m; path = Classes/Comment.m; sourceTree = "<group>"; };
+		28B8DFB116D98D7800988839 /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = Classes/Post.h; sourceTree = "<group>"; };
+		28B8DFB216D98D7800988839 /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = Classes/Post.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,8 +169,8 @@
 		2896AF3416D8A46700235911 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2896AF3616D8A49F00235911 /* GameScoresViewController.h */,
-				2896AF3716D8A49F00235911 /* GameScoresViewController.m */,
+				2896AF3616D8A49F00235911 /* PostsViewController.h */,
+				2896AF3716D8A49F00235911 /* PostsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -175,9 +178,11 @@
 		2896AF3B16D8B27200235911 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				28B8DFA816D978EF00988839 /* GameScore.h */,
-				28B8DFA916D978EF00988839 /* GameScore.m */,
 				2896AF3C16D8B2A000235911 /* ParseExample.xcdatamodeld */,
+				28B8DFAE16D98C5500988839 /* Comment.h */,
+				28B8DFAF16D98C5500988839 /* Comment.m */,
+				28B8DFB116D98D7800988839 /* Post.h */,
+				28B8DFB216D98D7800988839 /* Post.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -296,7 +301,7 @@
 			files = (
 				2896AF2D16D8A39900235911 /* AppDelegate.m in Sources */,
 				2896AF2F16D8A39900235911 /* main.m in Sources */,
-				2896AF3816D8A49F00235911 /* GameScoresViewController.m in Sources */,
+				2896AF3816D8A49F00235911 /* PostsViewController.m in Sources */,
 				2896AF3E16D8B2A000235911 /* ParseExample.xcdatamodeld in Sources */,
 				28B8DF7F16D94AD300988839 /* PFIncrementalStore.m in Sources */,
 				28B8DF8216D94AF000988839 /* PFRESTClient.m in Sources */,
@@ -311,7 +316,8 @@
 				28B8DFA016D94BB200988839 /* UIImageView+AFNetworking.m in Sources */,
 				28B8DFA616D94BB900988839 /* AFIncrementalStore.m in Sources */,
 				28B8DFA716D94BB900988839 /* AFRESTClient.m in Sources */,
-				28B8DFAA16D978EF00988839 /* GameScore.m in Sources */,
+				28B8DFB016D98C5500988839 /* Comment.m in Sources */,
+				28B8DFB316D98D7800988839 /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

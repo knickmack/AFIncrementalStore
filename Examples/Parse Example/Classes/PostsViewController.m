@@ -1,16 +1,16 @@
 //
-//  GameScoresViewController.m
+//  PostsViewController.m
 //  Parse Example
 //
 //  Created by Nik Macintosh on 2013-02-22.
 //  Copyright (c) 2013 Nik Macintosh. All rights reserved.
 //
 
-#import "GameScoresViewController.h"
-#import "GameScore.h"
+#import "PostsViewController.h"
+#import "Post.h"
 #import "AppDelegate.h"
 
-@interface GameScoresViewController () <NSFetchedResultsControllerDelegate>
+@interface PostsViewController () <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic, readonly) NSFetchRequest *fetchRequest;
 @property (strong, nonatomic, readonly) NSFetchedResultsController *fetchedResultsController;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation GameScoresViewController
+@implementation PostsViewController
 
 @synthesize fetchRequest = _fetchRequest;
 @synthesize fetchedResultsController = _fetchedResultsController;
@@ -30,9 +30,9 @@
 
 - (NSFetchRequest *)fetchRequest {
     if (!_fetchRequest) {
-        _fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"GameScore"];
+        _fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Post"];
         
-        NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"score" ascending:YES selector:@selector(localizedStandardCompare:)];
+        NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"title" ascending:YES selector:@selector(localizedStandardCompare:)];
         
         _fetchRequest.returnsObjectsAsFaults = NO;
         _fetchRequest.sortDescriptors = @[ descriptor ];
@@ -88,10 +88,10 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
     }
-    GameScore *gameScore = (GameScore *)[self.fetchedResultsController objectAtIndexPath:indexPath];
+    Post *post = (Post *)[self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    cell.detailTextLabel.text = gameScore.score.stringValue;
-    cell.textLabel.text = gameScore.playerName;
+    cell.detailTextLabel.text = post.content;
+    cell.textLabel.text = post.title;
     
     return cell;
 }
@@ -102,7 +102,7 @@
     [super loadView];
     
     self.navigationItem.rightBarButtonItem = self.refreshBarButtonItem;
-    self.title = NSLocalizedString(@"GameScores", nil);
+    self.title = NSLocalizedString(@"Posts", nil);
 }
 
 - (void)viewDidLoad {

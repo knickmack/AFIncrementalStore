@@ -1,5 +1,5 @@
 //
-//  GameScoresViewController.h
+//  PostsViewController.h
 //  Parse Example
 //
 //  Created by Nik Macintosh on 2013-02-22.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameScoresViewController : UITableViewController
+@interface PostsViewController : UITableViewController
 
 @end

@@ -8,14 +8,14 @@
 
 #import "AppDelegate.h"
 #import "PFIncrementalStore.h"
-#import "GameScoresViewController.h"
+#import "PostsViewController.h"
 
 @interface AppDelegate ()
 
-@property (strong, nonatomic, readonly) GameScoresViewController *gameScoresViewController;
 @property (strong, nonatomic, readonly) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic, readonly) UINavigationController *navigationController;
 @property (strong, nonatomic, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+@property (strong, nonatomic, readonly) PostsViewController *postsViewController;
 
 - (void)saveContext;
 
@@ -23,11 +23,11 @@
 
 @implementation AppDelegate
 
-@synthesize gameScoresViewController = _gameScoresViewController;
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize navigationController = _navigationController;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize postsViewController = _postsViewController;
 
 #pragma mark - AppDelegate
 
@@ -39,14 +39,6 @@
     }
     
     return _window;
-}
-
-- (GameScoresViewController *)gameScoresViewController {
-    if (!_gameScoresViewController) {
-        _gameScoresViewController = [GameScoresViewController new];
-    }
-    
-    return _gameScoresViewController;
 }
 
 - (NSManagedObjectContext *)managedObjectContext {
@@ -69,7 +61,7 @@
 
 - (UINavigationController *)navigationController {
     if (!_navigationController) {
-        _navigationController = [[UINavigationController alloc] initWithRootViewController:self.gameScoresViewController];
+        _navigationController = [[UINavigationController alloc] initWithRootViewController:self.postsViewController];
     }
     
     return _navigationController;
@@ -88,6 +80,14 @@
     }
     
     return _persistentStoreCoordinator;
+}
+
+- (PostsViewController *)postsViewController {
+    if (!_postsViewController) {
+        _postsViewController = [PostsViewController new];
+    }
+    
+    return _postsViewController;
 }
 
 - (void)saveContext {
