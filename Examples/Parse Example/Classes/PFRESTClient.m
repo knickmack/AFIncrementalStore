@@ -53,6 +53,7 @@ static NSString * const kPFRESTAPIKey = @"YOUR_REST_API_KEY";
         return nil;
     }
     
+    self.parameterEncoding = AFJSONParameterEncoding;
     [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
     [self setDefaultHeader:@"Accept" value:@"application/json"];
     [self setDefaultHeader:@"X-Parse-Application-Id" value:kPFApplicationId];
